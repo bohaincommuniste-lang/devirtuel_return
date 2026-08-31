@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dé virtuel — lancer de dés en ligne !</title>
+        <link rel="stylesheet" href="styles/de.css">
+        <link rel="icon" type="image/png" href="./img/defavicon.png">
+        <script type="module" src="./dist/main_all.js" defer></script>
+    </head>
+    <body>
+        <center>
+            <div id="center-container">
+                <br>
+                <a href="./">
+                    <img src="./img/defavicon.png" alt="Dé virtuel" id="logo"><h1>Dé virtuel</h1>
+                </a>
+                <br>
+                <h2>Lancer de dés en ligne</h2>
+
+                <nav>
+                    <span>Nombre de dés : 
+                        <select id="n-dices">
+                            <option selected value="1">1 dé</option>
+                            <option value="2">2 dés</option>
+                            <option value="3">3 dés</option>
+                            <option value="4">4 dés</option>
+                            <option value="5">5 dés</option>
+                            <option value="6">6 dés</option>
+                            <option value="all" selected>Tout</option>
+                        </select>
+                    </span>
+                    <span>Nombre de faces : 
+                        <select id="faces">
+                            <option value="2">2 faces</option>
+                            <option value="3">3 faces</option>
+                            <option value="4">4 faces</option>
+                            <option value="5">5 faces</option>
+                            <option value="6">6 faces</option>
+                            <option value="7">7 faces</option>
+                            <option value="8">8 faces</option>
+                            <option value="9">9 faces</option>
+                            <option value="10">10 faces</option>
+                            <option value="12">12 faces</option>
+                            <option value="20">20 faces</option>
+                            <option value="22">22 faces</option>
+                            <option value="24">24 faces</option>
+                            <option value="30">30 faces</option>
+                            <option value="100">100 faces</option>
+                            <option value="all" selected>Tout</option>
+                        </select>
+                    </span>
+                    <span id="anim">
+                        <label for="anim">Animé</label> :<input type="checkbox" checked disabled>
+                    </span>
+                </nav>
+                
+                <div id="form-container">
+                    <form name="formulaire" method="post">
+                    <table width="300" border="0">
+                    <tbody>
+                        <tr>
+                            <td>Nombre de lancers :</td>
+                            <td><input id="n-dices-input" name="nbr1" type="number" value="50" size="8"></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre de faces :</td>
+                            <td><input id="faces-input" name="nbr2" type="number" value="6" size="8"></td>
+                        </tr>
+                    </tbody></table>
+                    <button id="roll" value="Lancer">Lancer</button></form>
+                </div>
+
+                <br>
+                <br>
+                <div id="res-all">
+                    <span id="res-total"></span>
+                    <span id="res-details"></span>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="credit">
+                    © 2017 DeVirtuel.com | <a href="./">Contactez-nous</a>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

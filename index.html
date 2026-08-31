@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dé virtuel — lancer de dés en ligne !</title>
+        <link rel="stylesheet" href="styles/de.css">
+        <link rel="icon" type="image/png" href="./img/defavicon.png">
+        <script type="module" src="./dist/main.js" defer></script>
+    </head>
+    <body>
+        <center>
+            <div id="center-container">
+                <br>
+                <a href="./">
+                    <img src="./img/defavicon.png" alt="Dé virtuel" id="logo"><h1>Dé virtuel</h1>
+                </a>
+                <br>
+                <h2>Lancer de dés en ligne</h2>
+
+                <nav>
+                    <span>Nombre de dés : 
+                        <select id="n-dices">
+                            <option selected value="1">1 dé</option>
+                            <option value="2">2 dés</option>
+                            <option value="3">3 dés</option>
+                            <option value="4">4 dés</option>
+                            <option value="5">5 dés</option>
+                            <option value="6">6 dés</option>
+                            <option value="all">Tout</option>
+                        </select>
+                    </span>
+                    <span>Nombre de faces : 
+                        <select id="faces">
+                            <option value="2">2 faces</option>
+                            <option value="3">3 faces</option>
+                            <option value="4">4 faces</option>
+                            <option value="5">5 faces</option>
+                            <option value="6">6 faces</option>
+                            <option value="7">7 faces</option>
+                            <option value="8">8 faces</option>
+                            <option value="9">9 faces</option>
+                            <option value="10">10 faces</option>
+                            <option value="12">12 faces</option>
+                            <option value="20">20 faces</option>
+                            <option value="22">22 faces</option>
+                            <option value="24">24 faces</option>
+                            <option value="30">30 faces</option>
+                            <option value="100">100 faces</option>
+                            <option value="all">Tout</option>
+                        </select>
+                    </span>
+                    <span id="anim">
+                        <label for="anim">Animé</label> :<input type="checkbox" checked disabled>
+                    </span>
+                </nav>
+                <br>
+                <br>
+                <div id="result-img-container">
+                    <div class="result-img" class="qqq"></div>
+                </div>
+                <br>
+                <br>
+                <div id="res">Résultat : 6</div>
+                <br>
+                <br>
+                <button id="roll">Lancer</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="help-box">
+                    <p>Ceci est un simulateur de dés en ligne - il est conçu pour les cas où vous besoin lancer de dés, mais il n'y en a pas de réels à portée de main.<br>Un dé virtuel peut avoir n'importe quel nombre de faces, ce qui est clairement son avantage. Aussi, vous pouvez le trouver pratique que son utilisation permet simplement d'économiser un peu de temps.</p>
+                    <h3>Comment utiliser le site</h3>
+                    <p></p>
+                    <ol>
+                        <li><u>Choisissez le nombre de dés</u> (en mode standard, avec animation de lancement, jusqu'à six sont disponibles pour la sélection - pour lancer plus de six sont à la fois, utilisez le générateur de dés) <u>et le nombre de faces</u> (la liste contient les variantes les plus populaires, vous pouvez également spécifier un nombre arbitraire de faces pour le dé en sélectionnant l'option <i>" tout "</i>) dont vous avez besoin dans les menus déroulants en haut de la page.<br>Également disponible pour la sélection est un ensemble pour le jeu Fudge (4dF).</li>
+                        <li>Pour relancer, <u>cliquez sur le bouton <i>" Lancer "</i></u> ou sur la touche <i>Entrée</i> du clavier.</li>
+                        <li><u>Le résultat</u> (la somme totale des valeurs de toutes les dés virtuels lancées) est automatiquement calculé et affiché au-dessus du bouton. Les valeurs sont générées de manière aléatoire.</li>
+                    </ol>
+                    <p></p>
+                    <h3>À propos de dé</h3>
+                    <p>Les dés sont utilisés pour générer des nombres aléatoires dans des jeux de hasard, par exemple dans le craps et le yahtzee, et sont également largement utilisés dans les jeux de société (comme trictrac et Monopoly) et les jeux de rôle sur table (JdR) tels que D&amp;D.;<br>Le dé réel est une figure tridimensionnelle avec des marques sur ses côtés (pépins, chiffres ou autres symboles) marquant la valeur du lancer. Sa forme traditionnelle est un cube (6 faces - d6), mais il existe d'autres formes (d3, d4, d8, d10, d12, d20, d100 etc.) - les dés non cubiques sont principalement utilisés dans les jeux de rôle.<br>Cette application en ligne, il est facile d'utiliser différents types de dés dans différentes combinaisons pour votre jeu.</p>
+                </div>
+                <div id="credit">
+                    © 2017 DeVirtuel.com | <a href="./all.html">Contactez-nous</a>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
