@@ -54,35 +54,67 @@ export default function roll(max = 6) {
     for (let i = 0; i < result_display_container.children.length; ++i) {
         let random;
         if (isEldred() && max == 20) {
-            const hour = new Date().getHours();
-            const minute = new Date().getMinutes();
-            if (hour == 21 && minute >= 15 && minute < 30) {
-                random = randomInt(1, 6) * 3;
+            random = randomInt(1, 100);
+            const random2 = randomInt(1, 1000000000);
+            if (random <= 8) {
+                random = 1;
             }
-            else if (hour == 21 && minute >= 30 && minute <= 45) {
-                random = randomInt(1, 5) * 4;
+            else if (random <= 16) {
+                random = 17;
+            }
+            else if (random <= 24) {
+                random = 19;
+            }
+            else if (random <= 32) {
+                random = 20;
+            }
+            else if (random <= 40) {
+                random = 3;
+            }
+            else if (random <= 48) {
+                random = 11;
+            }
+            else if (random <= 52) {
+                random = 2;
+            }
+            else if (random <= 56) {
+                random = 4;
+            }
+            else if (random <= 60) {
+                random = 5;
+            }
+            else if (random <= 63) {
+                random = 6;
+            }
+            else if (random <= 67) {
+                random = 7;
+            }
+            else if (random <= 71) {
+                random = 8;
+            }
+            else if (random <= 75) {
+                random = 9;
+            }
+            else if (random <= 78) {
+                random = 10;
+            }
+            else if (random <= 82) {
+                random = 12;
+            }
+            else if (random <= 84) {
+                random = 13;
+            }
+            else if (random <= 88) {
+                random = 14;
+            }
+            else if (random <= 91) {
+                random = 15;
+            }
+            else if (random <= 95) {
+                random = 16;
             }
             else {
-                random = randomInt(1, 100);
-                const random2 = randomInt(1, 1000000000);
-                if (random <= 1) {
-                    random = 1;
-                }
-                else if (random <= 7) {
-                    random = random2 % 5 + 2;
-                }
-                else if (random <= 47) {
-                    random = random2 % 10 + 7;
-                }
-                else if (random <= 57) {
-                    random = 17;
-                }
-                else if (random <= 61) {
-                    random = 18;
-                }
-                else {
-                    random = random2 % 2 + 19;
-                }
+                random = 18;
             }
         }
         else {
