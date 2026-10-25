@@ -38,40 +38,68 @@ export function update(values) {
 export default function roll(max, n) {
     let random;
     if (isEldred() && max == 20) {
-        const hour = new Date().getHours();
-        const minute = new Date().getMinutes();
-        if (hour == 21 && minute >= 15 && minute < 30) {
-            random = randomInts(1, 6, n);
-            for (let i = 0; i < n; ++i)
-                random[i] *= 3;
-        }
-        else if (hour == 21 && minute >= 30 && minute <= 45) {
-            random = randomInts(1, 5, n);
-            for (let i = 0; i < n; ++i)
-                random[i] *= 4;
-        }
-        else {
-            random = randomInts(1, 100, n);
-            const random2 = randomInts(1, 1000000000, n);
-            for (let i = 0; i < n; ++i) {
-                if (random[i] <= 1) {
-                    random[i] = 1;
-                }
-                else if (random[i] <= 7) {
-                    random[i] = random2[i] % 5 + 2;
-                }
-                else if (random[i] <= 47) {
-                    random[i] = random2[i] % 10 + 7;
-                }
-                else if (random[i] <= 57) {
-                    random[i] = 17;
-                }
-                else if (random[i] <= 61) {
-                    random[i] = 18;
-                }
-                else {
-                    random[i] = random2[i] % 2 + 19;
-                }
+        random = randomInts(1, 100, n);
+        const random2 = randomInts(1, 1000000000, n);
+        for (let i = 0; i < n; ++i) {
+            if (random[i] <= 8) {
+                random[i] = 1;
+            }
+            else if (random[i] <= 16) {
+                random[i] = 17;
+            }
+            else if (random[i] <= 24) {
+                random[i] = 19;
+            }
+            else if (random[i] <= 32) {
+                random[i] = 20;
+            }
+            else if (random[i] <= 40) {
+                random[i] = 3;
+            }
+            else if (random[i] <= 48) {
+                random[i] = 11;
+            }
+            else if (random[i] <= 52) {
+                random[i] = 2;
+            }
+            else if (random[i] <= 56) {
+                random[i] = 4;
+            }
+            else if (random[i] <= 60) {
+                random[i] = 5;
+            }
+            else if (random[i] <= 63) {
+                random[i] = 6;
+            }
+            else if (random[i] <= 67) {
+                random[i] = 7;
+            }
+            else if (random[i] <= 71) {
+                random[i] = 8;
+            }
+            else if (random[i] <= 75) {
+                random[i] = 9;
+            }
+            else if (random[i] <= 78) {
+                random[i] = 10;
+            }
+            else if (random[i] <= 82) {
+                random[i] = 12;
+            }
+            else if (random[i] <= 84) {
+                random[i] = 13;
+            }
+            else if (random[i] <= 88) {
+                random[i] = 14;
+            }
+            else if (random[i] <= 91) {
+                random[i] = 15;
+            }
+            else if (random[i] <= 95) {
+                random[i] = 16;
+            }
+            else {
+                random[i] = 18;
             }
         }
     }

@@ -1,4 +1,5 @@
-import roll, { update } from "./dice_all.js";
+// @ts-ignore
+import roll, { update } from "./dice_all.js?v=1";
 
 const button: HTMLButtonElement = document.getElementById("roll") as HTMLButtonElement;
 const n_dices_select: HTMLSelectElement = document.getElementById("n-dices") as HTMLSelectElement;
